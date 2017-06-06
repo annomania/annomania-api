@@ -1,0 +1,10 @@
+BadRequest:
+  type: object
+  properties:
+    clientError:
+      type: array
+      items:
+        type: string
+      example:
+        - ValidationError
+        - something is required

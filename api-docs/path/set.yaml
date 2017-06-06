@@ -1,0 +1,123 @@
+get:
+  tags:
+    - set
+  summary: Get a Set
+  description: Get a Set by Id
+  produces:
+    - application/json
+  parameters:
+    - name: setid
+      in: path
+      description: ID of the Set to get
+      required: true
+      type: string
+  responses:
+    200:
+      description: Set as JSON Object
+    404:
+      description: Set was not found
+    400:
+      description: Something went wrong
+      schema:
+        $ref: ../definition/badrequest.yaml#/BadRequest
+    401:
+      description: Invalid API Keys or Set is private
+
+gets:
+  tags:
+    - set
+  summary: Get all non private Sets
+  description: Get all non private Sets as JSON Array
+  produces:
+    - application/json
+  responses:
+    200:
+      description: Sets as JSON Array
+    400:
+      description: Something went wrong
+      schema:
+        $ref: ../definition/badrequest.yaml#/BadRequest
+    401:
+      description: Invalid API Keys
+
+delete:
+  tags:
+    - set
+  summary: Delete a Set
+  description: Delete a Set by ID
+  parameters:
+    - name: setid
+      in: path
+      description: ID of the Set to delete
+      required: true
+      type: string
+  responses:
+    200:
+      description: Set was deleted
+    404:
+      description: Set was not found
+    400:
+      description: Something went wrong
+      schema:
+        $ref: ../definition/badrequest.yaml#/BadRequest
+    401:
+      description: Invalid API Keys
+
+put:
+  tags:
+    - set
+  summary: Put a Set
+  description: Put a Set by ID
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - name: setid
+      in: path
+      description: ID of the Set to put
+      required: true
+      type: string
+    - name: body
+      in: body
+      description: Set object to put
+      required: true
+      schema:
+        $ref: '../definition/set.yaml#/Set'
+  responses:
+    200:
+      description: Set put successfully
+    404:
+      description: Set was not found
+    400:
+      description: Something went wrong
+      schema:
+        $ref: ../definition/badrequest.yaml#/BadRequest
+    401:
+      description: Invalid API Keys
+
+post:
+  tags:
+    - set
+  summary: Post a Set
+  description: Post a Set and return it as JSON Object
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - name: body
+      in: body
+      description: Set object to post
+      required: true
+      schema:
+        $ref: ../definition/set.yaml#/Set
+  responses:
+    201:
+      description: Created Set as JSON Object
+    400:
+      description: Something went wrong
+      schema:
+        $ref: ../definition/badrequest.yaml#/BadRequest
+    401:
+      description: Invalid API Keys

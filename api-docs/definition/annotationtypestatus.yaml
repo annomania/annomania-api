@@ -1,0 +1,18 @@
+AnnotationTypeStatus:
+  type: object
+  required:
+    - annotationTypeId
+    - annotationOptionId
+    - ratio
+    - annotationCount
+  properties:
+    annotationTypeId:
+      type: string
+    annotationOptionId:
+      type: string
+    ratio:
+      type: number
+      format: double
+    annotationCount:
+      type: number
+      format: int32

@@ -1,0 +1,15 @@
+AnnotationType:
+  type: object
+  required:
+    - options
+  properties:
+    _id:
+      type: string
+      readOnly: true
+    options:
+      type: array
+      example:
+        - name: positive
+        - name: negative
+      items:
+        $ref: annotationoption.yaml#/AnnotationOption

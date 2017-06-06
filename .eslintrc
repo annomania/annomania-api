@@ -1,0 +1,18 @@
+{
+  "plugins": [
+    "filenames"
+  ],
+  "rules": {
+    "no-console": 0,
+    "no-underscore-dangle": [2, { "allow": ["_id", "__v"] }],
+    "no-param-reassign": [2, { "props": false }],
+    "filenames/match-regex": [1, "^[a-z_.]+$", true],
+    "filenames/match-exported": [ 1, "snake" ],
+    "no-unused-vars": [2, { "argsIgnorePattern": "^_$" }],
+    "no-warning-comments": 1,
+    "import/prefer-default-export": 1,
+    "radix": ["error", "as-needed"],
+    "no-plusplus": 0
+  },
+  "extends": "airbnb"
+}

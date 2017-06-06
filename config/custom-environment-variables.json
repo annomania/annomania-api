@@ -1,0 +1,26 @@
+{
+  "http": {
+    "port": "HTTP_PORT"
+  },
+  "db": {
+    "name": "DB_NAME",
+    "port": "DB_PORT",
+    "container": "DB_CONTAINER"
+  },
+  "redis": {
+    "port": "REDIS_PORT",
+    "container": "REDIS_CONTAINER"
+  },
+  "logging": {
+    "level": "LOGGING_LEVEL",
+    "file": "LOGGING_FILE",
+    "console": "LOGGING_CONSOLE"
+  },
+  "cluster": {
+    "workers": "CLUSTER_WORKERS"
+  },
+  "swagger": {
+    "host": "SWAGGER_HOST",
+    "port": "SWAGGER_PORT"
+  }
+}

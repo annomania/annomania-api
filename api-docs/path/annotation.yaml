@@ -1,0 +1,37 @@
+post:
+  tags:
+    - annotation
+  summary: Post an Annotation
+  description: Post an Annotation to a Text from a Set and return it as JSON Object
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - name: body
+      in: body
+      description: Annotation object to post
+      required: true
+      schema:
+        $ref: ../definition/annotation.yaml#/Annotation
+    - name: setid
+      in: path
+      description: SetID of the Text to post Annotation in
+      required: true
+      type: string
+    - name: textid
+      in: path
+      description: TextID to post Annotation for
+      required: true
+      type: string
+  responses:
+    201:
+      description: Created Annotation as JSON Object
+    404:
+      description: Set or Text was not found
+    400:
+      description: Something went wrong
+      schema:
+        $ref: ../definition/badrequest.yaml#/BadRequest
+    401:
+      description: Invalid API Keys

@@ -1,0 +1,37 @@
+Set:
+  type: object
+  required:
+    - name
+  properties:
+    _id:
+      type: string
+      readOnly: true
+    name:
+      type: string
+      example: set
+    private:
+      type: boolean
+      default: false
+      example: false
+    owner:
+      type: string
+      readOnly: true
+    annotationTypes:
+      type: array
+      items:
+        $ref: annotationtype.yaml#/AnnotationType
+    language:
+      type: string
+      example: en
+    meta:
+      type: object
+    textSchema:
+      type: object
+    createdAt:
+      type: string
+      format: date-time
+      readOnly: true
+    updatedAt:
+      type: string
+      format: date-time
+      readOnly: true

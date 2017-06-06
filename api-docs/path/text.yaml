@@ -1,0 +1,138 @@
+post:
+  tags:
+    - text
+  summary: Post a Text
+  description: Post a Text and return it as JSON. Also accepts an array of Texts.
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - name: setid
+      in: path
+      description: SetID to post Text in
+      required: true
+      type: string
+    - name: body
+      in: body
+      description: Text to post
+      required: true
+      schema:
+        $ref: ../definition/text.yaml#/Text
+  responses:
+    201:
+      description: Text/Texts as JSON Object/Array
+    404:
+      description: Set was not found
+    400:
+      description: Something went wrong
+      schema:
+        $ref: ../definition/badrequest.yaml#/BadRequest
+    401:
+      description: Invalid API Keys
+
+put:
+  tags:
+    - text
+  summary: Put a Text
+  description: Put a Text by ID
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - name: setid
+      in: path
+      description: SetID to post Text in
+      required: true
+      type: string
+    - name: textid
+      in: path
+      description: ID of the text
+      required: true
+      type: string
+    - name: body
+      in: body
+      description: Text to put
+      required: true
+      schema:
+        $ref: '../definition/text.yaml#/Text'
+  responses:
+    200:
+      description: Text put successfully
+    404:
+      description: Set or Text was not found
+    400:
+      description: Something went wrong
+      schema:
+        $ref: ../definition/badrequest.yaml#/BadRequest
+    401:
+      description: Invalid API Keys
+
+delete:
+  tags:
+    - text
+  summary: Delete a Text
+  description: Delete a Text by ID
+  parameters:
+    - name: setid
+      in: path
+      description: SetID to delete Text from
+      required: true
+      type: string
+    - name: textid
+      in: path
+      description: ID of the text
+      required: true
+      type: string
+  responses:
+    200:
+      description: Text deleted successfully
+    404:
+      description: Set or Text was not found
+    400:
+      description: Something went wrong
+      schema:
+        $ref: ../definition/badrequest.yaml#/BadRequest
+    401:
+      description: Invalid API Keys
+
+get:
+  tags:
+    - text
+  summary: Get texts
+  description: Return texts from a set using query parameters
+  produces:
+    - application/json
+  parameters:
+    - name: setid
+      in: path
+      description: SetID to get text from
+      required: true
+      type: string
+    - name: fetchStrategy
+      in: query
+      description: |
+        How to retrieve the texts. Available strategies are:
+          * leastAnnotated (default)
+          * random
+          * topic
+    - name: amount
+      in: query
+      description: Amount of texts to get
+      type: number
+    - name: topic
+      in: query
+      description: Topic query when using fetchStrategy = topic
+      type: string
+  responses:
+    200:
+      description: Texts as JSON Array
+    404:
+      description: Text not found
+    400:
+      description: Something went wrong
+      schema:
+        $ref: ../definition/badrequest.yaml#/BadRequest
+    401:
+      description: Invalid API Keys

@@ -1,0 +1,10 @@
+{
+  "db": {
+    "name": "annomania_dev"
+  },
+  "logging": {
+    "level": "debug",
+    "file":  false,
+    "console": true
+  }
+}

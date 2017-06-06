@@ -1,0 +1,28 @@
+{
+  "http": {
+    "port": 3000
+  },
+  "db": {
+    "name": "annomania",
+    "port": 27017,
+    "container": "mongo"
+  },
+  "redis": {
+    "port": 6379,
+    "container": "redis"
+  },
+  "logging": {
+    "level": "info",
+    "file":  true,
+    "filenameError": "error.log",
+    "filenameApp": "app.log",
+    "console": false
+  },
+  "cluster": {
+    "workers": 1
+  },
+  "swagger": {
+    "host": "http://localhost",
+    "port": 8080
+  }
+}

@@ -1,0 +1,93 @@
+swagger: 2.0
+
+info:
+  version: 0.7.0
+  title: Annomania
+  description: API to manage textdata in sets and the respective annotations.
+
+schemes:
+  - http
+host: localhost:3000
+basePath: /
+
+paths:
+  /:
+    get:
+      summary: Hello Annomania
+      description: Return the hello message
+      produces:
+        - text/html
+      responses:
+        200:
+          description: The hello message
+
+  /health-check:
+    get:
+      summary: Health-check
+      description: Health-checks the api and returns the status
+      produces:
+        - text/html
+      responses:
+        200:
+          description: Everything OK
+
+  # Set
+  /set:
+    get:
+      $ref: path/set.yaml#/gets
+    post:
+      $ref: path/set.yaml#/post
+  /set/{setid}:
+    delete:
+      $ref: path/set.yaml#/delete
+    put:
+      $ref: path/set.yaml#/put
+    get:
+      $ref: path/set.yaml#/get
+
+  # Text
+  /set/{setid}/text:
+    get:
+      $ref: path/text.yaml#/get
+    post:
+      $ref: path/text.yaml#/post
+  /set/{setid}/text/{textid}:
+    put:
+      $ref: path/text.yaml#/put
+    delete:
+      $ref: path/text.yaml#/delete
+
+  # Annotation
+  /set/{setid}/text/{textid}/annotation:
+    post:
+      $ref: path/annotation.yaml#/post
+
+  /set/{setid}/trainingset:
+    get:
+      $ref: path/trainingset.yaml#/get
+
+definitions:
+  Set:
+    $ref: definition/set.yaml#/Set
+  Text:
+    $ref: definition/text.yaml#/Text
+  Annotation:
+    $ref: definition/annotation.yaml#/Annotation
+  AnnotationType:
+    $ref: definition/annotationtype.yaml#/AnnotationType
+  AnnotationOption:
+    $ref: definition/annotationoption.yaml#/AnnotationOption
+  AnnotationTypeStatus:
+    $ref: definition/annotationtypestatus.yaml#/AnnotationTypeStatus
+
+securityDefinitions:
+  kongId:
+    type: apiKey
+    name: X-Consumer-ID
+    in: header
+  username:
+    type: apiKey
+    name: X-Consumer-Username
+    in: header
+
+security: [{ kongId: [], username: [] }]

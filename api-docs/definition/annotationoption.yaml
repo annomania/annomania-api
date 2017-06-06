@@ -1,0 +1,10 @@
+AnnotationOption:
+  type: object
+  required:
+    - name
+  properties:
+    _id:
+      type: string
+      readOnly: true
+    name:
+      type: string

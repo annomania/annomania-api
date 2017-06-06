@@ -1,0 +1,138 @@
+[
+  {
+    "text": "The weather today was so beautiful",
+    "setId": { "$oid": "100000000000100000000000" },
+    "annotationTypeStatus": [
+      {
+        "annotationTypeId": { "$oid": "222222222222222222222222"},
+        "annotationOptionId": { "$oid": "444444444444444444444444"},
+        "ratio": 0.4,
+        "annotationCount": 12
+      }
+    ]
+  },
+  {
+    "text": "Annomania is the best tool",
+    "setId": { "$oid": "100000000000100000000000" },
+    "annotationTypeStatus": [
+      {
+        "annotationTypeId": { "$oid": "222222222222222222222222"},
+        "annotationOptionId": { "$oid": "444444444444444444444444"},
+        "ratio": 1.0,
+        "annotationCount": 33
+      }
+    ]
+  },
+  {
+    "text": "It was a very rainy day, so bad",
+    "setId": { "$oid": "100000000000100000000000" },
+    "annotationTypeStatus": [
+      {
+        "annotationTypeId": { "$oid": "222222222222222222222222"},
+        "annotationOptionId": { "$oid": "555555555555555555555555"},
+        "ratio": 0.8,
+        "annotationCount": 18
+      }
+    ]
+  },
+  {
+    "text": "That is a really good option",
+    "setId": { "$oid": "100000000000100000000000" },
+    "annotationTypeStatus": [
+      {
+        "annotationTypeId": { "$oid": "222222222222222222222222"},
+        "annotationOptionId": { "$oid": "444444444444444444444444"},
+        "ratio": 0.6,
+        "annotationCount": 10
+      }
+    ]
+  },
+  {
+    "text": "The world is still moving",
+    "setId": { "$oid": "100000000000100000000000" },
+    "annotationTypeStatus": [
+      {
+        "annotationTypeId": { "$oid": "222222222222222222222222"},
+        "annotationOptionId": { "$oid": "444444444444444444444444"},
+        "ratio": 0.9,
+        "annotationCount": 22
+      }
+    ]
+  },
+  {
+    "text": "It is great fun with JS",
+    "setId": { "$oid": "100000000000100000000000" },
+    "annotationTypeStatus": [
+      {
+        "annotationTypeId": { "$oid": "222222222222222222222222"},
+        "annotationOptionId": { "$oid": "444444444444444444444444"},
+        "ratio": 0.6,
+        "annotationCount": 16
+      }
+    ]
+  },
+  {
+    "text": "The internet connection is so error-prone",
+    "setId": { "$oid": "100000000000100000000000" },
+    "annotationTypeStatus": [
+      {
+        "annotationTypeId": { "$oid": "222222222222222222222222"},
+        "annotationOptionId": { "$oid": "555555555555555555555555"},
+        "ratio": 0.8,
+        "annotationCount": 88
+      }
+    ]
+  },
+  {
+    "text": "He discovered a great new world",
+    "setId": { "$oid": "100000000000100000000000" },
+    "annotationTypeStatus": [
+      {
+        "annotationTypeId": { "$oid": "222222222222222222222222"},
+        "annotationOptionId": { "$oid": "444444444444444444444444"},
+        "ratio": 0.4,
+        "annotationCount": 12
+      }
+    ]
+  },
+  {
+    "text": "A dangerous storm is approaching the city",
+    "setId": { "$oid": "100000000000100000000000" },
+    "annotationTypeStatus": [
+      {
+        "annotationTypeId": { "$oid": "222222222222222222222222"},
+        "annotationOptionId": { "$oid": "555555555555555555555555"},
+        "ratio": 0.7,
+        "annotationCount": 7
+      }
+    ]
+  },
+  {
+    "text": "He likes to read stories",
+    "setId": { "$oid": "100000000000100000000000" },
+    "annotationTypeStatus": [
+      {
+        "annotationTypeId": { "$oid": "222222222222222222222222"},
+        "annotationOptionId": { "$oid": "444444444444444444444444"},
+        "ratio": 0.3,
+        "annotationCount": 9
+      }
+    ]
+  },
+  {
+    "text": "The train was late",
+    "setId": { "$oid": "100000000000100000000000" },
+    "annotationTypeStatus": [
+      {
+        "annotationTypeId": { "$oid": "222222222222222222222222"},
+        "annotationOptionId": { "$oid": "555555555555555555555555"},
+        "ratio": 0.1,
+        "annotationCount": 10
+      }
+    ]
+  },
+  {
+    "text": "I'm the sad last text that no one annotated :(",
+    "setId": { "$oid": "100000000000100000000000" }
+  }
+]

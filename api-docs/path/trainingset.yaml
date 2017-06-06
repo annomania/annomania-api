@@ -1,0 +1,34 @@
+get:
+  tags:
+    - trainingset
+  summary: Get a trainingset of a set
+  description: Get all texts in a set with the labels.
+  consumes:
+    - application/json
+  produces:
+    - application/json
+  parameters:
+    - name: setid
+      in: path
+      description: SetID to get trainingset from
+      required: true
+      type: string
+    - name: annotationType
+      in: query
+      description:
+        Annotation type for the trainingset. If not provided,
+        first annotation in set is taken.
+      type: string
+    - name: amount
+      in: query
+      description: Amount of texts to fetch
+      type: number
+    - name: page
+      in: query
+      description: Page of texts to fetch
+      type: number
+  responses:
+    200:
+      description: The trainingset of the set
+    401:
+      description: Invalid API Keys

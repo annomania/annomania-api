@@ -1,0 +1,29 @@
+Text:
+  type: object
+  required:
+    - text
+  properties:
+    _id:
+      type: string
+      readOnly: true
+    text:
+      type: string
+      example: This is a text!
+    setId:
+      type: string
+      readOnly: true
+    meta:
+      type: object
+    annotationTypeStatus:
+      type: array
+      items:
+        $ref: annotationtypestatus.yaml#/AnnotationTypeStatus
+      readOnly: true
+    createdAt:
+      type: string
+      format: date-time
+      readOnly: true
+    updatedAt:
+      type: string
+      format: date-time
+      readOnly: true
